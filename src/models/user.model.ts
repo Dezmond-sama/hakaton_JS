@@ -7,8 +7,12 @@ export default class User extends Model {
     @Column(DataType.INTEGER)
     id!: number
 
-    @Column(DataType.STRING)
-    @AllowNull(false)
     @Unique
+    @AllowNull(false)
+    @Column(DataType.STRING)
     email!: string
+
+    @AllowNull(false)
+    @Column(DataType.STRING)
+    password!: string
 }
