@@ -15,9 +15,31 @@ class AuthService{
               success: false,
               message: error.message,
             }
-          }
-      
-          return status;
+          }      
+
+          return  status;
+    }
+    async login(userDTO:RegisterRequest){
+        let status = {
+            success: true,
+            message: 'user logged in',
+        };
+        await User.findOne({where: {email: userDTO.email}}).then((user) => {
+            if (!user) {
+              status = {
+                success: false,
+                message: 'user not found',
+              }
+            }
+            else if (user.password !== userDTO.password) {
+                status = {
+                    success: false,
+                    message: 'password incorrect',
+                }
+            }
+        })
+
+        return status
     }
 }
 
