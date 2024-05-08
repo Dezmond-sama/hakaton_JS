@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\controller",
+    "\\src\\dtos",
+    "\\src\\env",
+    "\\src\\models",
+    "\\src\\router",
+    "\\src\\router\\routes",
+    "\\src\\router\\routes\\public",
+    "\\src\\services"
+  ],
+  "SelectedNode": "\\src\\server.ts",
+  "PreviewInSolutionExplorer": false
+}
